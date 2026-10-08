@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "txtout"
-version = "0.1.1"
+version = "0.2.0"
 description = "Flatten a project's directory tree and file contents into one portable file, and restore it back into a real project later."
 readme = "README.md"
 requires-python = ">=3.8"
