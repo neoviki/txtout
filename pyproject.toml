@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "projpack"
+name = "txtout"
 version = "0.1.1"
 description = "Flatten a project's directory tree and file contents into one portable file, and restore it back into a real project later."
 readme = "README.md"
@@ -25,15 +25,15 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/neoviki/projpack"
-Issues = "https://github.com/neoviki/projpack/issues"
+Homepage = "https://github.com/neoviki/txtout"
+Issues = "https://github.com/neoviki/txtout/issues"
 
-# This is what creates the actual `pjexport` / `pjimport`
+# This is what creates the actual `txtout` / `txtin`
 # commands on the user's PATH after install - no manual
 # chmod/symlinking required.
 [project.scripts]
-pjexport = "projpack.pjexport:main"
-pjimport = "projpack.pjimport:main"
+txtout = "txtout.txtout:main"
+txtin = "txtout.txtin:main"
 
 [project.optional-dependencies]
 test = ["pytest>=7"]

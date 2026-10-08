@@ -1,6 +1,6 @@
-# projpack
+# txtout
 
-Flatten an entire project (directory tree and file contents) into a single, readable, portable plain-text file using `pjexport`, and reconstruct it later with `pjimport`, preserving the exact directory structure and file contents.
+Flatten an entire project (directory tree and file contents) into a single, readable, portable plain-text file using `txtout`, and reconstruct it later with `txtin`, preserving the exact directory structure and file contents.
 
 
 Useful for:
@@ -14,7 +14,7 @@ Useful for:
 
 ```bash
 # Directly from Git (recommended)
-pipx install git+https://github.com/neoviki/projpack.git
+pipx install git+https://github.com/neoviki/txtout.git
 
 # From a cloned checkout
 pip install .
@@ -23,38 +23,38 @@ pip install .
 pipx install .
 ```
 
-All methods install the `pjexport` and `pjimport` commands on your `PATH` — no
+All methods install the `txtout` and `txtin` commands on your `PATH` — no
 manual `chmod` or symlinking needed.
 
 
 ```bash
-pjexport --help
-pjimport --help
+txtout --help
+txtin --help
 ```
 ## Update to a Newer Version
 
 If installed with `pipx`, update the installed package with:
 
 ```bash
-pipx upgrade projpack
+pipx upgrade txtout
 ```
 
 To reinstall directly from the latest Git repository version:
 
 ```bash
-pipx uninstall projpack
-pipx install git+https://github.com/neoviki/projpack.git
+pipx uninstall txtout
+pipx install git+https://github.com/neoviki/txtout.git
 ```
 
 ## Uninstall
 
-To remove `projpack`:
+To remove `txtout`:
 
 ```bash
-pipx uninstall projpack
+pipx uninstall txtout
 ```
 
-This removes the installed `pjexport` and `pjimport` commands.
+This removes the installed `txtout` and `txtin` commands.
 
 
 ## Usage
@@ -62,26 +62,26 @@ This removes the installed `pjexport` and `pjimport` commands.
 ### Export
 
 ```bash
-pjexport                            # export current dir -> project.export
-pjexport .                          # export current dir -> project.export
-pjexport . -o mybackup.txt          # any output name/extension works
-pjexport . -e excluded_files.csv    # apply exclusions from a CSV
+txtout                            # export current dir -> project.export
+txtout .                          # export current dir -> project.export
+txtout . -o mybackup.txt          # any output name/extension works
+txtout . -e excluded_files.csv    # apply exclusions from a CSV
 ```
 
 ### Import (restore)
 
 ```bash
-pjimport project.export                        # restore into current dir
-pjimport project.export -d ./restored           # restore into another dir
-pjimport project.export --overwrite              # overwrite existing files
-pjimport project.export --dry-run                # preview only, no writes
+txtin project.export                        # restore into current dir
+txtin project.export -d ./restored           # restore into another dir
+txtin project.export --overwrite              # overwrite existing files
+txtin project.export --dry-run                # preview only, no writes
 ```
 
 ## Exclude CSV Format
 
 You can specify files, directories, and extensions to exclude in a CSV file named excludes.csv.
 
-By default, pjexport searches for excludes.csv in the current directory. If you specify a different exclusion file using the -e option, it uses that file instead.
+By default, txtout searches for excludes.csv in the current directory. If you specify a different exclusion file using the -e option, it uses that file instead.
 
 For example:
 
@@ -109,7 +109,7 @@ Each line can contain a file, directory, extension, or path to exclude.
 - The tree preview inside the export file always shows a generic
   `Project_Root/` label instead of your real folder name (override with
   `--root-label`).
-- `pjexport` prints the resolved directory it's about to scan
+- `txtout` prints the resolved directory it's about to scan
   (`Scanning: /abs/path`) before it runs, so you can confirm it's using
   the folder you expect.
 

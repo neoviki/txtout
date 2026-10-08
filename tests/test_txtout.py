@@ -1,5 +1,5 @@
 """
-Tests for projpack.pjexport
+Tests for txtout.txtout
 
 Run with:
     pip install -e .
@@ -11,7 +11,7 @@ from pathlib import Path
 
 import pytest
 
-from projpack.pjexport import (
+from txtout.txtout import (
     RepoConfig,
     generate_export,
     get_files,

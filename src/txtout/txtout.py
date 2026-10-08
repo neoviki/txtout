@@ -536,7 +536,7 @@ def generate_export(config):
 
 
     # ----------------------------------------------
-    # PROJPACK INFORMATION
+    # txtout INFORMATION
     # ----------------------------------------------
 
     export_filename = config.output.name
@@ -545,30 +545,30 @@ def generate_export(config):
         f"# This project export file <{export_filename}> was created using the"
     )
     lines.append(
-        "# pjexport tool developed by Viki."
+        "# txtout tool developed by Viki."
     )
     lines.append("#")
     lines.append(
         "# Check the repository for more details:"
     )
     lines.append(
-        "# https://github.com/neoviki/projpack"
+        "# https://github.com/neoviki/txtout"
     )
     lines.append("#")
     lines.append(
-        "# To restore this project, you need the pjimport tool."
+        "# To restore this project, you need the txtin tool."
     )
     lines.append("#")
     lines.append(
-        "# Install projpack using:"
+        "# Install txtout using:"
     )
     lines.append("#")
     lines.append(
-        "# pipx install git+https://github.com/neoviki/projpack.git"
+        "# pipx install git+https://github.com/neoviki/txtout.git"
     )
     lines.append("#")
     lines.append(
-        "# The above command installs both pjimport and pjexport, which you can"
+        "# The above command installs both txtin and txtout, which you can"
     )
     lines.append(
         "# use to import and export projects."
@@ -582,7 +582,7 @@ def generate_export(config):
     )
     lines.append("#")
     lines.append(
-        f"# pjimport {export_filename}"
+        f"# txtin {export_filename}"
     )
     lines.append("#")
     lines.append(
