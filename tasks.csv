@@ -1,0 +1,3 @@
+Nr,Task,Status
+1,Support for installation via apt on Debian-based systems,
+2,If parser finds a gif/video/image print its dimension and size info,
