@@ -1,3 +1,5 @@
 Nr,Task,Status
 1,Support for installation via apt on Debian-based systems,
 2,If parser finds a gif/video/image print its dimension and size info,
+3,Create excludes.csv file by default with - predefined exclude files,
+4,Create export file as project_export.txt so that it would be easy to open in text editor,
